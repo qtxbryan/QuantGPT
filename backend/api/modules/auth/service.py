@@ -4,6 +4,7 @@ from bson.objectid import ObjectId
 from pydantic import ValidationError
 from werkzeug.security import generate_password_hash, check_password_hash
 
+
 class AuthService:
     @staticmethod
     def register_user(email, password):
@@ -20,7 +21,7 @@ class AuthService:
         hashed_password = generate_password_hash(password)
 
         # Create user record
-        user_id = str(ObjectId())
+        user_id = ObjectId()
         users_collection.insert_one({
             "_id": user_id,
             "email": email,
@@ -28,9 +29,9 @@ class AuthService:
         })
 
         # Return success with JWT token
-        access_token = create_access_token(identity=user_id)
-        return {"message": "User registered successfully", "access_token": access_token, "user_id": user_id}, 201
-        
+        access_token = create_access_token(identity=str(user_id))
+        return {"message": "User registered successfully", "access_token": access_token, "user_id": str(user_id)}, 201
+
     @staticmethod
     def login_user(email, password):
         """
@@ -48,9 +49,10 @@ class AuthService:
             return {"message": "Invalid email or password"}, 401
 
         # Generate and return JWT token
-        access_token = create_access_token(identity=user["_id"])
-        return {"access_token": access_token, "user_id": user["_id"]}, 200
-    
+        access_token = create_access_token(identity=str(
+            user["_id"]))  # Ensure user_id is a string
+        return {"access_token": access_token, "user_id": str(user["_id"])}, 200
+
     @staticmethod
     def find_user_by_id(user_id):
         """
@@ -58,13 +60,14 @@ class AuthService:
         """
         try:
             users_collection = mongo.db.users
-            user = users_collection.find_one({"id": user_id})
+            user = users_collection.find_one({"_id": ObjectId(user_id)})
             if not user:
-                return None 
+                return None
             return user
         except Exception as e:
+            print(f"Error finding user by ID: {e}")
             return None
-    
+
     @staticmethod
     def update_user(user_id, updates):
         """

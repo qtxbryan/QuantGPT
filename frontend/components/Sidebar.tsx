@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LogOut } from "lucide-react";
 import { SIDEBAR_LINKS } from "@/constants";
+import LogoutButton from "./Logout";
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -48,7 +49,7 @@ const Sidebar = () => {
       <div className="p-4">
         <button className="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-sm text-red-400 transition-colors hover:bg-gray-800">
           <LogOut className="h-5 w-5" />
-          <span>Log out</span>
+          <LogoutButton />
         </button>
       </div>
     </motion.div>

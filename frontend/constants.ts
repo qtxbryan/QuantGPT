@@ -19,7 +19,7 @@ export const SIDEBAR_LINKS = [
   {
     icon: PieChart,
     label: "Portfolios",
-    href: "/portfolio",
+    href: "/portfolios",
   },
   {
     icon: Newspaper,
@@ -75,3 +75,11 @@ export const NEWS_TABS: Tab[] = [
   { label: "Latest", href: "/news/latest" },
   { label: "Top", href: "/news/top" },
 ];
+
+export const PORTFOLIO_TABS: Tab[] = [
+  { label: "Overview", href: "#overview" },
+  { label: "Assets", href: "#assets" },
+  { label: "Projections", href: "#projections" },
+];
+
+export const TIME_PERIODS = ["1d", "7d", "30d", "6m", "12m", "max"];

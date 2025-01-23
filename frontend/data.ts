@@ -94,3 +94,146 @@ export const NEWS_DATA_MOCK = [
     sentiment: "Negative",
   },
 ];
+
+export const TIME_SERIES_MOCK = {
+  labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+  datasets: [
+    {
+      label: "Portfolio Value",
+      data: [1200, 1500, 1700, 1400, 1800, 2000],
+      borderColor: "#7dd1e7",
+      backgroundColor: "rgba(125, 209, 231, 0.3)",
+    },
+    {
+      label: "Invested Amount",
+      data: [1000, 1300, 1600, 1200, 1700, 1900],
+      borderColor: "#fbbf24",
+      backgroundColor: "rgba(251, 191, 36, 0.3)",
+    },
+  ],
+};
+
+export const CHART_DATA_MOCK = {
+  labels: [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ],
+  datasets: [
+    {
+      label: "Total Value",
+      data: [
+        50000, 51000, 52000, 54000, 53000, 55000, 56000, 57000, 58000, 58144.8,
+      ],
+      borderColor: "#7dd1e7",
+      backgroundColor: "rgba(125, 209, 231, 0.1)",
+    },
+    {
+      label: "Invested Capital",
+      data: [
+        50000, 50500, 51000, 51500, 52000, 52500, 53000, 53500, 54000, 54500,
+      ],
+      borderColor: "#a8d897",
+      backgroundColor: "rgba(168, 216, 151, 0.1)",
+    },
+  ],
+};
+
+export const PORTFOLIO_DATA_MOCK = [
+  {
+    id: "1",
+    name: "Tech Growth Portfolio",
+    value: 25000.0,
+    change: 15.3,
+    composition: "AAPL 40%, GOOGL 30%, MSFT 30%",
+  },
+  {
+    id: "2",
+    name: "Dividend Income",
+    value: 18000.0,
+    change: 5.7,
+    composition: "JNJ 25%, PG 25%, KO 25%, VZ 25%",
+  },
+  {
+    id: "3",
+    name: "Green Energy",
+    value: 15144.8,
+    change: -2.1,
+    composition: "TSLA 40%, ENPH 30%, SEDG 30%",
+  },
+];
+
+export const PORTFOLIO_PERFORMANCE_MOCK = {
+  labels: [
+    "Dec 2020",
+    "Jan 2021",
+    "Feb 2021",
+    "Mar 2021",
+    "Apr 2021",
+    "May 2021",
+    "Jun 2021",
+  ],
+  datasets: [
+    {
+      label: "Portfolio",
+      data: [100, 120, 115, 125, 110, 130, 125],
+      borderColor: "#7dd1e7",
+      backgroundColor: "rgba(125, 209, 231, 0.1)",
+      tension: 0.4,
+    },
+    {
+      label: "S&P 500",
+      data: [100, 110, 108, 115, 105, 120, 115],
+      borderColor: "#a8d897",
+      backgroundColor: "rgba(168, 216, 151, 0.1)",
+      tension: 0.4,
+    },
+  ],
+};
+
+export const PORTFOLIO_METRICS_MOCK = [
+  { title: "Annualized Return", value: "15.1%" },
+  { title: "Cumulative Return", value: "16.9%" },
+  { title: "Max Drawdown", value: "5.2%" },
+  { title: "Sharpe Ratio", value: "1.13" },
+  { title: "Sortino Ratio", value: "1.37" },
+  { title: "Volatility", value: "18.2%" },
+  { title: "Beta", value: "0.90" },
+  { title: "Correlation to S&P 500", value: "0.85" },
+  { title: "Alpha", value: "1.8%" },
+  { title: "Treynor Ratio", value: "1.25" },
+];
+
+export const PORTFOLIO_ALLOCATIONS_MOCK = [
+  { name: "US Stocks", percentage: 45 },
+  { name: "International Stocks", percentage: 25 },
+  { name: "US Bonds", percentage: 15 },
+  { name: "International Bonds", percentage: 10 },
+  { name: "Commodities", percentage: 3 },
+  { name: "Real Estate", percentage: 2 },
+];
+
+export const PORTFOLIO_ASSETS_MOCK = [
+  { name: "Apple Inc.", allocation: 10, value: 20000 },
+  { name: "Microsoft Corp.", allocation: 8, value: 16000 },
+  { name: "Amazon.com Inc.", allocation: 7, value: 14000 },
+  { name: "Alphabet Inc.", allocation: 5, value: 10000 },
+  { name: "Meta Platforms Inc.", allocation: 4, value: 8000 },
+];
+
+export const PORTFOLIO_MOVERS = [
+  { asset: "Apple Inc.", price: 200, change: -20, changePercent: -1 },
+  { asset: "Microsoft Corp.", price: 160, change: 5, changePercent: 3 },
+  { asset: "Amazon.com Inc.", price: 140, change: 10, changePercent: 7 },
+  { asset: "Alphabet Inc.", price: 100, change: -5, changePercent: -4 },
+  { asset: "Meta Platforms Inc.", price: 80, change: -3, changePercent: -2 },
+];
