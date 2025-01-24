@@ -237,3 +237,54 @@ export const PORTFOLIO_MOVERS = [
   { asset: "Alphabet Inc.", price: 100, change: -5, changePercent: -4 },
   { asset: "Meta Platforms Inc.", price: 80, change: -3, changePercent: -2 },
 ];
+
+export const ASSETS_MOCK = [
+  {
+    icon: "/placeholder.svg",
+    title: "Global Equity",
+    ticker: "VT",
+    description: "Vanguard Total World Stock ETF",
+    price: 98.45,
+    change: 1.23,
+  },
+  {
+    icon: "/placeholder.svg",
+    title: "US Equity",
+    ticker: "VTSAX",
+    description: "Vanguard Total Stock Market Index Fund",
+    price: 105.67,
+    change: -0.45,
+  },
+  {
+    icon: "/placeholder.svg",
+    title: "Real Estate",
+    ticker: "VNQ",
+    description: "Vanguard Real Estate Index Fund",
+    price: 82.31,
+    change: 0.78,
+  },
+  {
+    icon: "/placeholder.svg",
+    title: "International Equity",
+    ticker: "VEA",
+    description: "Vanguard FTSE Developed Markets ETF",
+    price: 47.89,
+    change: -0.32,
+  },
+  {
+    icon: "/placeholder.svg",
+    title: "Emerging Markets Equity",
+    ticker: "VWO",
+    description: "Vanguard FTSE Emerging Markets ETF",
+    price: 41.23,
+    change: 1.56,
+  },
+  {
+    icon: "/placeholder.svg",
+    title: "Clean Energy",
+    ticker: "ICLN",
+    description: "iShares Global Clean Energy ETF",
+    price: 18.75,
+    change: 2.14,
+  },
+];

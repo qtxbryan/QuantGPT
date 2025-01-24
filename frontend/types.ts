@@ -17,6 +17,12 @@ export interface Asset {
   value: number;
 }
 
+export interface Asset1 {
+  icon: string;
+  title: string;
+  ticker: string;
+}
+
 export interface HeaderProps {
   headerTabs?: Tab[];
   title?: string;
@@ -82,4 +88,27 @@ export interface AssetAllocationProps {
 
 export interface AssetTableProps {
   assets: Asset[];
+}
+
+export interface SelectedAssetsProps {
+  assets: Asset1[];
+  onRemove: (ticker: string) => void;
+}
+
+export interface AssetSearchProps {
+  onSearch: (query: string) => void;
+}
+
+export interface EnhancedAssetCardProps {
+  icon: string;
+  title: string;
+  ticker: string;
+  description: string;
+  price: number;
+  change: number;
+  onSelect: () => void;
+  onViewChart: () => void;
+  onViewNews: () => void;
+  onViewAnalysis: () => void;
+  isSelected?: boolean;
 }
